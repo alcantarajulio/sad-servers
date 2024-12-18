@@ -1,7 +1,7 @@
 # Scenario: Saint John: what is writing to this log file?
 Level: Easy
 ```bash
-  PID=$(ps aux | grep bad.log | grep -v grep | awk '{print $2}'); kill -9 $PID 
+  kill -9 $(ps aux | grep bad.log | grep -v grep | awk '{print $2}') 
 ```
 
 # Scenario: "Saskatoon": counting IPs.
